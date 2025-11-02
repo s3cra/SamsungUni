@@ -30,7 +30,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextIndent
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Devices.AUTOMOTIVE_1024p
 import androidx.compose.ui.tooling.preview.Devices.TABLET
@@ -84,3 +90,41 @@ fun HelloPreview2(){
 fun HelloPreview3(){
     Hello("Павел")
 }
+//Задание 3
+@Composable
+@Preview(showSystemUi = true,
+    device = "spec:width=400dp,height=200dp")
+fun JetpackComposeIsPreview1(){
+    val text = LocalContext.current.resources.getString(R.string.task3)
+    Text(text,
+        Modifier.fillMaxWidth().systemBarsPadding(),
+        Color.Green,
+        fontSize = 16.sp,
+        fontStyle = FontStyle.Italic,
+        textAlign = TextAlign.Center)
+}
+@Composable
+@Preview(showSystemUi = true,
+    device = "spec:width=400dp,height=200dp")
+fun JetpackComposeIsPreview2(){
+    val text = LocalContext.current.resources.getString(R.string.task3)
+    Text(text,
+        Modifier.fillMaxWidth().systemBarsPadding(),
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis)
+}
+@Composable
+@Preview(showSystemUi = true,
+    device = "spec:width=400dp,height=200dp")
+fun JetpackComposeIsPreview3(){
+    val text = LocalContext.current.resources.getString(R.string.task3)
+    Text(text,
+        Modifier.fillMaxWidth().systemBarsPadding().background(Color.Green),
+        fontSize = 24.sp,
+        textDecoration = TextDecoration.Underline,
+        style = TextStyle(
+            textIndent = TextIndent(48.sp)
+        )
+        )
+}
+
