@@ -316,36 +316,28 @@ fun WaterTracker() {
             fontWeight = FontWeight.Bold,
             color = primaryColor
         )
-
         Spacer(modifier = Modifier.height(48.dp))
-
         Text(
             text = "$waterCount мл",
             fontSize = 48.sp,
             fontWeight = FontWeight.Bold,
             color = secondaryColor
         )
-
         Spacer(modifier = Modifier.height(48.dp))
-
         Text(
             text = "Трекер дней",
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             color = primaryColor
         )
-
         Spacer(modifier = Modifier.height(48.dp))
-
         Text(
             text = "$daysCount ${daysCountWord.value}",
             fontSize = 48.sp,
             fontWeight = FontWeight.Bold,
             color = secondaryColor
         )
-
         Spacer(modifier = Modifier.height(48.dp))
-
         Button(
             colors = ButtonColors(
                 contentColor = buttonTextColor,
@@ -362,9 +354,7 @@ fun WaterTracker() {
                 color = buttonTextColor
             )
         }
-
         Spacer(modifier = Modifier.height(48.dp))
-
         Button(
             colors = ButtonColors(
                 contentColor = buttonTextColor,
