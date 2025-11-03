@@ -13,6 +13,7 @@ import org.junit.runner.RunWith
 import org.junit.Assert.*
 import org.junit.Rule
 
+//Задание 9
 @RunWith(AndroidJUnit4::class)
 class UITest {
 
